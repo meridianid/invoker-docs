@@ -3,7 +3,7 @@ import React from 'react'
 import Default from './../layouts/Default/Default'
 import Intro from '../components/Intro/Intro'
 import Footer from '../components/Footer/Footer'
-import WhoWeAre from '../components/WhoWeAre/WhoWeAre'
+// import WhoWeAre from '../components/WhoWeAre/WhoWeAre'
 
 const HomePage = ({
   className,
@@ -12,8 +12,8 @@ const HomePage = ({
   return (
     <Default>
       <Intro />
-      <WhoWeAre />
-      <Footer />
+      {/* <WhoWeAre /> */}
+      {/* <Footer /> */}
     </Default>
   )
 }

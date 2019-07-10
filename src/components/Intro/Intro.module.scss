@@ -12,10 +12,16 @@
 }
 
 .intro {
-  max-width: 600px;
+  max-width: 720px;
+  line-height: 1.5;
+  margin-bottom: $space-ml;
+}
+
+.description {
+  max-width: 640px;
   line-height: 1.5;
   font-weight: 400;
-  margin-bottom: $space-ll;
+  margin-bottom: $space-ml;
 }
 
 .letsgo {
@@ -30,10 +36,10 @@
     content: '';
     position: absolute;
     background-color: $bg-sea-100;
-    bottom: 8px;
+    bottom: 2px;
     left: 0;
     z-index: -1;
     width: 100%;
-    height: 16px;
+    height: 20px;
   }
 }

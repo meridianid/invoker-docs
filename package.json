@@ -1,7 +1,7 @@
 {
-  "name": "invoker-gatsby",
+  "name": "invoker-docs",
   "private": true,
-  "description": "Meridian.id official starter for gatsby website project",
+  "description": "The official documentation for Invoker.",
   "version": "0.1.0",
   "author": "Ongki 'vasilenka' Herlambang <ongki@herlambang.id | o@meridian.id>",
   "scripts": {

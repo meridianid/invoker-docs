@@ -4,6 +4,7 @@ import cx from 'classnames'
 
 import Container from '../../layouts/Container/Container'
 import Text from '../Text/Text'
+import Button from '../Button/Button';
 
 const Hero = ({
   className,
@@ -13,17 +14,17 @@ const Hero = ({
   return (
     <Container className={styles.container}>
       <div className={cx(styles.root, className)} {...restProps}>
-        {text
-          ?  <Text heading2 component="h1" className={styles.intro}>{text}</Text>
-          :   <>
-                <Text heading2 component="h1" className={styles.intro}>
-                  An opiniated starter by Meridian.id, <br/> using <strong className={styles.highlights}>React Hooks</strong>, <strong className={styles.highlights}>SCSS</strong>, <strong className={styles.highlights}>CSS Modules</strong>, <strong className={styles.highlights}>invoker</strong>, <strong className={styles.highlights}>invoker-styles</strong>, <strong className={styles.highlights}>codesplitting</strong>, and a lot of <strong className={styles.highlights}>love.</strong>
-                </Text>
-                <Text heading4 className={styles.letsgo}>
-                  Let's make well-crafted website and mobile app available for everyone!
-                </Text>
-              </>
-        }
+        <Text display1 component="h1" breakWord style={{marginBottom: '12px'}}>Invoker<span style={{paddingLeft: '12px', opacity: 0.33}}>101</span></Text>
+        <Text heading3 component="p" className={styles.intro}>
+          Making well-designed digital products possible for everyone.
+        </Text>
+        <Text medium component="p" className={styles.description}>
+          <strong>Invoker101</strong> is a set of highly opiniated tools, components, and guidelines that helps our team at Meridian.id building website better & faster with best development experiences.
+        </Text>
+        <Text medium component="p" className={styles.description}>
+          If you like <strong className={styles.highlights}>React Hooks</strong>, <strong className={styles.highlights}>SCSS</strong>, <strong className={styles.highlights}>CSS Modules</strong>, and <strong className={styles.highlights}>Component-based Design</strong>. Give it a try! We sure you will like it too.
+        </Text>
+        <Button primary large>Get Started</Button>
       </div>
     </Container>
   )

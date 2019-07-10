@@ -4,8 +4,8 @@ module.exports = {
   // pathPrefix: "/reponame",
 
   siteMetadata: {
-    title: `invoker-gatsby`,
-    description: `An opiniated starter for gatsby projects built by Meridian.id. This starter ships with the main Gatsby configuration files you might need.`,
+    title: `invoker-docs`,
+    description: `The official documentation website for Invoker.`,
     author: `Ongki 'vasilenka' Herlambang <ongki@herlambang.id | o@meridian.id>`,
 
     // This line needed for SITEMAP GENERATOR and ROBOT.txt

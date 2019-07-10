@@ -10,6 +10,8 @@ import NavbarPrimary from '../NavbarPrimary/NavbarPrimary'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import Button from '../Button/Button'
 
+import {Github} from '../SocialIcons/SocialIcons'
+
 const Navbar = ({ bleed, children, className, ...restProps }) => {
   return (
     <Container>
@@ -26,10 +28,12 @@ const Navbar = ({ bleed, children, className, ...restProps }) => {
           </Link>
         </NavbarPrimary>
         <NavbarSecondary>
-          <NavbarMenu to="/blogs">Blogs</NavbarMenu>
+          {/* <NavbarMenu to="/blogs">Blogs</NavbarMenu> */}
           <NavbarMenu to="/about">About</NavbarMenu>
           <a href="https://github.com/meridianid/tinker-cli" target="_blank" rel="noreferrer noopener">
-            <Button small primary>Go to github</Button>
+            <div style={{width: '28px'}}>
+              <Github />
+            </div>
           </a>
         </NavbarSecondary>
       </nav>
