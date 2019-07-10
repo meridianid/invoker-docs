@@ -2,16 +2,16 @@
 
 .root {
   display: flex;
-  padding-top: $space-huge;
-  padding-bottom: $space-huge;
+  padding-top: $space-xxl;
+  padding-bottom: $space-xxl;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   min-height: 70vh;
-  border-bottom: 1px solid $dark-alpha-30;
 }
 
 .intro {
+  font-weight: 500;
   max-width: 720px;
   line-height: 1.5;
   margin-bottom: $space-ml;
@@ -35,7 +35,7 @@
   &::after {
     content: '';
     position: absolute;
-    background-color: $bg-sea-100;
+    background-color: $bg-rose-100;
     bottom: 2px;
     left: 0;
     z-index: -1;
