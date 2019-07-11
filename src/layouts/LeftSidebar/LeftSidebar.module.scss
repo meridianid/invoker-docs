@@ -1,0 +1,11 @@
+@import 'src/tokens';
+
+.root {
+  position: fixed;
+  width: 8vw;
+  min-width: 256px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rebeccapurple;
+}

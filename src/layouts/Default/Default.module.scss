@@ -4,3 +4,8 @@
 .root {
   min-height: 100vh;
 }
+
+.page {
+  position: relative;
+  display: flex;
+}

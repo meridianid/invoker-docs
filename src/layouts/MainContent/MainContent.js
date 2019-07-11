@@ -1,18 +1,22 @@
 import styles from './MainContent.module.scss';
 import React from 'react';
-import classnames from 'classnames';
+import cx from 'classnames';
+import Container from '../Container/Container';
 
-const MainContent = ({ children, className, ...restProps }) => {
+const MainContent = ({ children, fixedLeft, className, ...restProps }) => {
   return (
-    <div
-      {...restProps}
-      className={classnames({
-        [styles.root]: true,
-        [className]: className
-      })}
-    >
+    // <div
+    //   {...restProps}
+    //   className={cx({
+    //     [styles.root]: true,
+    //     [styles.fixedLeft]: fixedLeft,
+    //     [className]: className
+    //   })}
+    // >
+    <Container narrow>
       {children}
-    </div>
+    </Container>
+    // {/* </div> */}
   );
 };
 

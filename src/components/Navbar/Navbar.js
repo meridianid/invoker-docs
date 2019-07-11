@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import Container from '../../layouts/Container/Container'
 import Link from './../Link/Link'
-import { Starter as BrandLogo } from '../Brand/Brand'
+import { StarterAlt as BrandLogo } from '../Brand/Brand'
 import NavbarSecondary from '../NavbarSecondary/NavbarSecondary'
 import NavbarPrimary from '../NavbarPrimary/NavbarPrimary'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
@@ -14,7 +14,7 @@ import {Github} from '../SocialIcons/SocialIcons'
 
 const Navbar = ({ bleed, children, className, ...restProps }) => {
   return (
-    <Container>
+    <Container bleed className={styles.container}>
       <nav
         className={cx({
           [styles.root]: true,
@@ -28,12 +28,10 @@ const Navbar = ({ bleed, children, className, ...restProps }) => {
           </Link>
         </NavbarPrimary>
         <NavbarSecondary>
-          {/* <NavbarMenu to="/blogs">Blogs</NavbarMenu> */}
+          <NavbarMenu to="/blogs">Blogs</NavbarMenu>
           <NavbarMenu to="/about">About</NavbarMenu>
           <a href="https://github.com/meridianid/tinker-cli" target="_blank" rel="noreferrer noopener">
-            <div style={{width: '28px'}}>
-              <Github />
-            </div>
+            <Github style={{width: '28px', marginLeft: '16px', marginRight: '8px'}}/>
           </a>
         </NavbarSecondary>
       </nav>

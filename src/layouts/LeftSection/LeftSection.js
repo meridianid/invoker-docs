@@ -5,12 +5,12 @@ import classnames from 'classnames';
 const LeftSection = ({ children, fixed, className, ...restProps }) => {
   return (
     <div
-      {...restProps}
       className={classnames({
         [styles.root]: true,
         [styles.fixed]: fixed,
         [className]: className
       })}
+      {...restProps}
     >
       {children}
     </div>

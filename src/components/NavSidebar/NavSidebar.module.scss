@@ -1,0 +1,19 @@
+@import 'src/tokens';
+
+.root {
+  list-style: none;
+  padding: $space-vertical-s;
+  font-size: $heading-6;
+  line-height: 24px;
+  font-weight: $semibold;
+}
+
+.menu {
+  color: $dark-alpha-70;
+  transition: all .36s;
+}
+
+.active {
+  color: $brand-primary-200;
+  transition: all .28s;
+}

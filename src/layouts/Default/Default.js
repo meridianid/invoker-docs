@@ -8,8 +8,13 @@ import './../../sass/invoker-layout/grid.module.scss'
 import '../../assets/fonts/fonts'
 
 import Navbar from "../../components/Navbar/Navbar"
+import SEO from "./../../utils/seo"
+import LeftSection from '../LeftSection/LeftSection';
+import MainContent from '../MainContent/MainContent';
+import NavSidebar from '../../components/NavSidebar/NavSidebar';
+import LeftSidebar from '../../components/LeftSidebar/LeftSidebar';
 
-const Layout = ({ children }) => (
+const Default = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -23,14 +28,19 @@ const Layout = ({ children }) => (
     render={data => (
       <main className={styles.root}>
         <Navbar bleed/>
-        {children}
+        <div className={styles.page}>
+          <LeftSidebar />
+          <MainContent fixedLeft>
+            {children}
+          </MainContent>
+        </div>
       </main>
     )}
   />
 )
 
-Layout.propTypes = {
+Default.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default Default

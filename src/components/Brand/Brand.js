@@ -2,8 +2,8 @@ import styles from './Brand.module.scss'
 import React from 'react'
 import cx from 'classnames'
 
-import LogoStarter from './logo/starter.inline.svg'
-import LogoStarterAlt from './logo/starter--alt.inline.svg'
+import LogoStarter from './logo/word.inline.svg'
+import LogoStarterAlt from './logo/mark.inline.svg'
 import LogoStarterFull from './logo/starter--full.inline.svg'
 import LogoStarterFullAlt from './logo/starter--full--alt.inline.svg'
 
