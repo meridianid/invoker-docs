@@ -12,9 +12,9 @@ import Button from '../Button/Button'
 
 import {Github} from '../SocialIcons/SocialIcons'
 
-const Navbar = ({ bleed, children, className, ...restProps }) => {
+const Navbar = ({ bleed, narrow, children, className, ...restProps }) => {
   return (
-    <Container bleed className={styles.container}>
+    <Container bleed={bleed} narrow={narrow} className={styles.container}>
       <nav
         className={cx({
           [styles.root]: true,

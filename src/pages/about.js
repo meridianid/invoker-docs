@@ -11,7 +11,6 @@ const AboutPage = ({
   }) => {
   return (
     <Default>
-      <Intro text="About Page"/>
       <WhoWeAre />
       <Footer />
     </Default>

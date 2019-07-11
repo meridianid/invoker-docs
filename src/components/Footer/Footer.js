@@ -11,14 +11,14 @@ const Footer = ({
   ...restProps
   }) => {
   return (
-    <Container>
+    <>
       <footer className={cx(styles.root, className)} {...restProps}>
         <Wordmark />
         <div className={styles.contacts}>
           <Text medium component="p"><strong>#dowhatyoulove</strong></Text>
         </div>
       </footer>
-    </Container>
+    </>
   )
 }
 

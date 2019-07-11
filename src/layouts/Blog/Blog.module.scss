@@ -1,0 +1,11 @@
+@import 'src/tokens';
+@import 'src/base';
+
+.root {
+  min-height: 100vh;
+}
+
+.page {
+  position: relative;
+  display: flex;
+}

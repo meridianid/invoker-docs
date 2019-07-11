@@ -1,20 +1,21 @@
 import React from 'react'
 
-import Default from './../layouts/Default/Default'
-import Intro from '../components/Intro/Intro'
+import Blog from './../layouts/Blog/Blog'
 import Footer from '../components/Footer/Footer'
 import Blogs from '../components/Blogs/Blogs'
+import Container from '../layouts/Container/Container';
 
 const BlogsPage = ({
   className,
   ...restProps
   }) => {
   return (
-    <Default>
-      <Intro text="Blogs Page"/>
+    <Blog>
       <Blogs />
-      <Footer />
-    </Default>
+      <Container>
+        <Footer />
+      </Container>
+    </Blog>
   )
 }
 
