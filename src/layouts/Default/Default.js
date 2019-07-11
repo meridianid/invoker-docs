@@ -14,7 +14,7 @@ import MainContent from '../MainContent/MainContent';
 import NavSidebar from '../../components/NavSidebar/NavSidebar';
 import LeftSidebar from '../../components/LeftSidebar/LeftSidebar';
 
-const Default = ({ children }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -39,8 +39,8 @@ const Default = ({ children }) => (
   />
 )
 
-Default.propTypes = {
+Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Default
+export default Layout
