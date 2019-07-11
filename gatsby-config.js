@@ -7,6 +7,10 @@ module.exports = {
     title: `invoker-docs`,
     description: `The official documentation website for Invoker.`,
     author: `Ongki 'vasilenka' Herlambang <ongki@herlambang.id | o@meridian.id>`,
+    titleTemplate: `%s • invoker-docs`,
+    image: `/images/mid.png`,
+    twitterUsername: `@vasilenka_`,
+    facebookAppID: ``,
 
     // This line needed for SITEMAP GENERATOR and ROBOT.txt
     siteUrl: `https://meridian.id`,
