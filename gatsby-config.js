@@ -113,7 +113,7 @@ module.exports = {
       resolve: `gatsby-source-prismic-graphql`,
       options: {
         repositoryName: 'mid-dummy',
-        omitScript: true,
+        omitPrismicScript: true,
         previews: false,
         accessToken: 'MC5YUS1aWFJFQUFOd0FjLUxq.77-9CX3vv73vv71w77-977-9Y2jvv73vv73vv71277-977-9F21477-977-9K1MwRO-_ve-_vS8S77-9KE8',
       },
