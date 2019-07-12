@@ -1,0 +1,177 @@
+![alt text][cover-alt]
+<!-- [![alt text][mission]](http://meridian.id) -->
+
+<!-- 1. [Overview](#overview)
+2. [Static Website](#static-website)
+    * [Gatsby.js](#gatsby.js)
+3. [Dynamic Website](#dynamic-website)
+    * [Client-Side-Rendering (CSR)](#client-side-rendering-csr)
+    * [Server-Side-Rendering (SSR)](#server-side-rendering-ssr)
+4. [Content Management System (CMS)](#content-management-system-cms)
+    * [Prismic](#prismic)
+    * [Contentful](#contentful)
+    * [Strapi](#strapi)
+    * [Wordpress](#wordpress)
+    * [Ghost](#ghost)
+    * [Netlify](#netlify)
+5. [Deep Comparison](#deep-comparison)
+6. [Deployment](#deployment) -->
+
+## Overview
+
+```scss
+
+.hello {
+  background-color: red;
+  color: coral;
+}
+```
+
+```jsx
+import React from 'react'
+let dushi = "hello";
+
+const hello = () => {
+  return (
+    <Hello/>
+  )
+};
+
+export default hello;
+```
+
+```html
+<body>
+  <h1 class="my-name-is-slim-shady">Hello there! General Kenobi</h1>
+</body>
+```
+
+> This is a guidelines on deciding what kind of web to build for our client needs. It's also served as guidelines on where the company is heading in terms of web technology, so the team knows what they need to learn and improve.
+
+At [Meridian.id](http://meridian.id), we love React.js. And if the client doesn't have any specific needs for their stack or it's all up to us, we will try to build anything with React.js for the front-end of the site and using a more various stack for the backend.
+
+The main reason we choose React.js for our stack are:
+
+* It's an **Universal/Isomorphic Javascript** which means it can be used on the client side and also on the server. Which is the most valuable feature, because we can use React.js to use a static markup on the server which is ready to be rendered in the browser as-is. This is important for both speed and SEO. Universal rendering also make it possible to use the same code-base on both the server and client. This makes our code-base considerably simpler. JavaScript everywhere!
+* The **Components (Modular Design FTW!)** approach, means you can split your UI into simple, independent components which focus on doing one thing. This also means it’s easy for many developers to work on the same project without conflicts. Components make fixing bugs and refactoring very easy. You can just take the part of the UI that isn’t working, and either fix it or replace it.
+
+Although these features aren’t exclusive to React. They just work for us. And by focusing our stack with just React.js, we can have a base infrastructure and setup that can be used for any kind of projects and keep improving it overtime instead of building everything from scratch everytime we start a new project.
+
+## Static Website
+
+Static website is a website which files are static (pre-built) and served without change from the server.
+
+The term "static" does not mean that your site has no dynamic capabilities. It simply means that that your site consists of a set of "pre-built" files (namely html, js, and css files) that are directly served on request.
+
+### Gatsby.js
+
+[Gatsby.js](https://www.gatsbyjs.org/) is a static site generator based on React.js. It provides a lot useful and easy-to-use plugins that will help us on building high performance and beautiful website. Most of the heavy-lifting works already done, mostly you just need to focus on building your layouts.
+
+#### PROS using Gatsby
+
+* Build website with React.js (means we can take advantages of using the our component library, and the react ecosystem is just awesome)
+* It's super fast. Since content is pre-generated, no more time needed to dynamically generate content! This means no database queries, no html templating, etc.
+* A lot of plugins to help you improve your website performance (i.e. lazy load images, served various image sizes, etc.)
+* SEO friendly
+* Lots of deployment options (i.e. [GithubPages](https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/), [Now.sh](https://www.gatsbyjs.org/docs/deploying-to-now/), [Surge.sh](https://www.gatsbyjs.org/tutorial/part-one/#deploying-a-gatsby-site), [Netlify](https://www.gatsbyjs.org/docs/hosting-on-netlify/), and many more). Especially in the early stage of development when you need to show it to the client, you can deploy your website with just single command on the terminal
+* Lots of data sources options, because gatsby just the front-side of the webiste. So, basically you can use anything for the data sources
+
+#### CONS using Gatsby
+
+* Need a lot of work for online shop or e-commerce functionality. We are working on it. But for now, you are better off with wordpress if you want to have an online shop or ecommerce website
+* Static website (means you need to rebuild and redeploy when you want to update -- can be solved with CI/CD)
+
+#### When to use Static Website with Gatsby
+
+Any kind of static website that doesn't required a really fast changing content, i.e. **Company profile, Event website, and Website with Blog**
+
+The most important thing to do if you want to build a gatsby website for the client is you need to communicate that to update the content, gatsby website need to rebuild and redeploy. While it's necessarily complex and too long to do that, and it can be overcome with some CI/CD setup, the client still need to aware of that.
+
+## Dynamic Website
+
+Dynamic website is a website which files are dynamically generated with each incoming request on the server and then served.
+
+### Client-Side-Rendering (CSR)
+
+> Also known as Single Page Application (SPA)
+
+We are using a starter-kit built on top of [create-react-app](https://facebook.github.io/create-react-app/) for building a CSR web app. The starter kit is already powerful on it's own, and most of the time you are good to go with the default setup without any needs for ejecting.
+
+#### PROS of create-react-app
+
+* Build web app with React.js (means we can take advantages of using the our component library, and the react ecosystem is just awesome)
+
+#### CONS of create-react-app
+
+* Bad for SEO, because eveything rendered on the client browser and the server usually only send an empty `<div>`. Now google-bot can crawl a javascript site, but the other crawlers are not so much. So don't rely on this setup if your website required a good SEO.
+
+#### When to use CSR with create-react-app
+
+Web app for internal system, web app, and any kind of site with no requirements for SEO, i.e. **Admin Pages (Dashboard)**
+
+### Server-Side-Rendering (SSR)
+
+An SSR website is a webiste that generate it's content and markup on the server and deliver it to the client as it-is. This way, we can make the website dynamic, and also fast and SEO friendly, because everything generated on the server and delivered to the client browser as a static markup.
+
+For the SSR website, we built a starter-kit extending [Next.js](https://nextjs.org/)
+
+#### PROS of Next.js
+
+* Build web app with React.js (means we can take advantages of using the our component library, and the react ecosystem is just awesome)
+* It's fast, because everythings rendered on the server
+* SEO friendly
+
+#### CONS of Next.js
+
+* The setup and development is relatively complex compared to Static Website or CSR because some of functionality like `Routing` are done differently from the CSR
+
+#### When to use SSR with Next.js
+
+Any kind of public facing website with a lot and fast-changing content and heavily relied on SEO, i.e. **Online Store, eCommerce, News, etc.**
+
+## Content Management System (CMS)
+
+### Prismic
+
+[Prismic.io](https://prismic.io) come with a very generous free-tier and webhook integrations with minimal setup. The free-tier also hosted on prismic server with SSL enabled. It's super good for a blogging platform or just a simple company profile that want to have some updated content capabilities.
+
+#### PROS on Free-tier
+
+* Generous services for free-tier account
+* Webhooks available
+
+#### CONS on Free-tier
+
+* Free-tier can only have 1 user
+* Every type of contents cramped into a single table
+
+### Contentful
+
+[Contentful](https://contentful.com) is just like Prismic.io. It's a headless content management system that focus on the strucure of the datas and doesn't care about the presentation layer or where it’s serving its content to.
+
+### Strapi
+
+### Netlify
+
+[Netlify](https://www.netlify.com)
+
+### Wordpress
+
+Wordpress 5.0 built with RESTful API out of the box that can be consumed by any kind of website and mobile app. When it comes to building an online shop, wordpress really shines because it's plugins.
+
+### Ghost
+
+[Ghost](https://ghost.org/) The hosted solution is rather expensive but you can use it as a self-hosted app for free because it is open source.
+
+## Deep Comparison
+
+For now, you can view the deep comparison in this [spreadsheet](https://docs.google.com/spreadsheets/d/172LvheWOWiEdzvvoD_XZ6qPCRKRb9IgXvtUjld3xqlY/edit?usp=sharing)
+
+## Deployment
+
+Sometimes you just need to deploy the website that you are building so the client can access it and give some feedback. For this purpose, we have few alternatives other than deploying to the shared hosting or production server.
+
+[title]: https://raw.githubusercontent.com/meridianid/building-website-101/master/docs/title.png "Building website 101"
+[cover]: https://raw.githubusercontent.com/meridianid/building-website-101/master/docs/cover.png "Building website 101"
+[cover-alt]: https://raw.githubusercontent.com/meridianid/building-website-101/master/docs/cover-alts.png "Building website 101"
+[mission]: https://raw.githubusercontent.com/meridianid/building-website-101/master/docs/mission.png "Meridian.id"

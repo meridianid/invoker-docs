@@ -12,7 +12,7 @@ const LeftSidebar = ({
     <LeftSection fixed>
       <ul className={cx(styles.container, styles.root)} {...restProps}>
         <NavSidebar to="/">Introduction</NavSidebar>
-        <NavSidebar to="/react-hooks">Building Website 101</NavSidebar>
+        <NavSidebar to="/building-website-101">Building Website 101</NavSidebar>
         <NavSidebar to="/getting-started">Getting Started</NavSidebar>
         <ul className={styles.container}>
           <NavSidebar to="/invoker-gatsby">Gatsby</NavSidebar>

@@ -3,7 +3,7 @@ import React from 'react';
 import cx from 'classnames';
 import Container from '../Container/Container';
 
-const MainContent = ({ children, fixedLeft, className, ...restProps }) => {
+const MainContent = ({ post, children, fixedLeft, className, ...restProps }) => {
   return (
     // <div
     //   {...restProps}
@@ -13,7 +13,7 @@ const MainContent = ({ children, fixedLeft, className, ...restProps }) => {
     //     [className]: className
     //   })}
     // >
-    <Container narrow>
+    <Container narrow={!post} post={post} {...restProps}>
       {children}
     </Container>
     // {/* </div> */}
