@@ -44,7 +44,7 @@ export default ({children, className, live, render}) => {
             <div className={cx('gatsby-highlight')}>
               <pre className={cx(className, styles.root)} style={style}>
                 {tokens.map((line, i) => (
-                  <div {...getLineProps({ line, key: i })}>
+                  <div {...getLineProps({ line, key: i })} >
                     {line.map((token, key) => (
                       <span {...getTokenProps({ token, key })} />
                     ))}

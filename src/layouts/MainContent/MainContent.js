@@ -13,7 +13,7 @@ const MainContent = ({ post, children, fixedLeft, className, ...restProps }) => 
     //     [className]: className
     //   })}
     // >
-    <Container narrow={!post} post={post} {...restProps}>
+    <Container narrow={!post} post={post} {...restProps} className={className}>
       {children}
     </Container>
     // {/* </div> */}

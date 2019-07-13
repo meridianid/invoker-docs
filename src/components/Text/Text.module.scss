@@ -4,6 +4,10 @@
   font-family: $font-primary;
 }
 
+.heading {
+  font-family: $font-display;
+}
+
 // Display Text
 .display1 {
   font-size: $display-1;
@@ -37,21 +41,21 @@
   composes: root;
   font-size: $heading-2;
   line-height: 36px;
-  letter-spacing: -1.2px;
+  // letter-spacing: -1.2px;
   font-weight: $bold;
 }
 .heading3 {
   composes: root;
   font-size: $heading-3;
   line-height: 30px;
-  letter-spacing: -0.8px;
+  // letter-spacing: -0.8px;
   font-weight: $bold;
 }
 .heading4 {
   composes: root;
   font-size: $heading-4;
   line-height: 26px;
-  letter-spacing: -0.096px;
+  // letter-spacing: -0.096px;
   font-weight: $bold;
 }
 .heading4Alt {

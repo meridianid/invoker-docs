@@ -83,77 +83,97 @@
   p,
   li {
     @include screen(smallPhone) {
-      font-size: $body-2;
+      font-size: 17px;
       line-height: 26px;
     }
     @include screen(phone) {
-      font-size: $body-2;
+      font-size: 17px;
       line-height: 26px;
     }
     @include screen(tablet) {
-      font-size: $body-2;
+      font-size: 17px;
       line-height: 26px;
     }
     @include screen(tabletLandscape) {
-      font-size: $body-2;
+      font-size: 17px;
       line-height: 26px;
     }
     @include screen(desktop) {
-      font-size: $body-3;
+      font-size: 17px;
       line-height: 26px;
     }
     @include screen(desktopWide) {
-      font-size: $body-3;
+      font-size: 17px;
       line-height: 26px;
     }
   }
 
   blockquote {
-    padding: $space-ml;
+    padding-top: $space-ml;
+    padding-bottom: $space-ml;
+    padding-right: $space-ml;
     position: relative;
     margin-bottom: $space-ml;
     background-color: #f6f8fa;
     border-radius: $radius-xs;
+    @include screen(smallPhone) {
+      padding-left: $space-xl;
+    }
+    @include screen(phone) {
+      padding-left: $space-xl;
+    }
+    @include screen(tablet) {
+      padding-left: $space-xl;
+    }
+    @include screen(tabletLandscape) {
+      padding-left: $space-xl;
+    }
+    @include screen(desktop) {
+      padding-left: $space-xl;
+    }
+    @include screen(desktopWide) {
+      padding-left: $space-xl;
+    }
 
     &::before {
-      content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='Gainsboro' d='M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-opacity='0.10' d='M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
       position: absolute;
       color: $dark-alpha-40;
       @include screen(smallPhone) {
-        top: -12px;
-        left: -48px;
-        width: 96px;
-        height: 96px;
+        top: 0px;
+        left: 0px;
+        width: $space-xl;
+        height: $space-xl;
       }
       @include screen(phone) {
         top: 0px;
-        left: -32px;
-        width: 64px;
-        height: 64px;
+        left: 0px;
+        width: $space-xl;
+        height: $space-xl;
       }
       @include screen(tablet) {
         top: 0px;
-        left: -24px;
-        width: 64px;
-        height: 64px;
+        left: 0px;
+        width: $space-xl;
+        height: $space-xl;
       }
       @include screen(tabletLandscape) {
         top: 0px;
-        left: -24px;
-        width: 64px;
-        height: 64px;
+        left: 0px;
+        width: $space-xl;
+        height: $space-xl;
       }
       @include screen(desktop) {
-        top: -12px;
-        left: -64px;
-        width: 96px;
-        height: 96px;
+        top: 0px;
+        left: 0px;
+        width: $space-xl;
+        height: $space-xl;
       }
       @include screen(desktopWide) {
-        top: -12px;
-        left: -64px;
-        width: 96px;
-        height: 96px;
+        top: 0px;
+        left: 0px;
+        width: $space-xl;
+        height: $space-xl;
       }
     }
   }

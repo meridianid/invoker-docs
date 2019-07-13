@@ -21,7 +21,7 @@ const componentSerializer = {
   h4: props => <Text heading4 component="h4" {...props}/>,
   h5: props => <Text heading5 component="h5" {...props}/>,
   h6: props => <Text heading6 component="h6" {...props}/>,
-  p: props => <Text large component="p" {...props}/>,
+  p: props => <Text medium component="p" {...props}/>,
   code: CodeAlt
 }
 
@@ -49,13 +49,11 @@ const DefaultMdx = props => (
         <Navbar bleed/>
         <div className={styles.page}>
           <LeftSidebar />
-          <MainContent post fixedLeft>
-            <main className={styles.mdx}>
-              <MDXProvider components={componentSerializer}>
-                  {/* <Style>{baseStyles}</Style> */}
-                  <Container {...props} />
-              </MDXProvider>
-            </main>
+          <MainContent post fixedLeft className={styles.mdx}>
+            <MDXProvider components={componentSerializer}>
+                {/* <Style>{baseStyles}</Style> */}
+                <Container {...props} />
+            </MDXProvider>
           </MainContent>
         </div>
       </main>
