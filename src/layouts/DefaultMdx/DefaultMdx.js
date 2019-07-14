@@ -34,10 +34,10 @@ const componentSerializer = {
     <Text heading6 component="h6" className={styles.heading6} {...props} />
   ),
   p: props => (
-    <Text medium component="p" className={styles.paragraph} {...props} />
+    <Text large component="p" className={styles.paragraph} {...props} />
   ),
   li: props => (
-    <Text medium component="li" className={styles.listItem} {...props} />
+    <Text large component="li" className={styles.listItem} {...props} />
   ),
   // pre: props => <pre {...props}/>,
   code: CodeAlt,
