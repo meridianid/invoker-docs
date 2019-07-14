@@ -11,5 +11,14 @@
 }
 
 .font {
-  font-family: 'Roboto Mono', monospace !important;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  line-height: 24px;
+
+  > div > textarea,
+  > div > pre {
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 14px;
+    line-height: 24px;
+  }
 }

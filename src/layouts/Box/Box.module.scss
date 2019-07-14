@@ -7,6 +7,10 @@
   display: inline-flex;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
 .row {
   @include boxRow;
 }

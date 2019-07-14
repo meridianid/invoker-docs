@@ -1,7 +1,7 @@
 import styles from './Box.module.scss'
 import React from 'react'
 import classnames from 'classnames'
-import { oneOf} from 'prop-types'
+import { oneOf } from 'prop-types'
 
 import withDirectionProps from '../../components/__private/withDirectionProps'
 import withJustifyProps from '../../components/__private/withJustifyProps'
@@ -13,6 +13,7 @@ const Box = ({
   className,
 
   inline,
+  wrap,
 
   direction,
   justify,
@@ -27,6 +28,7 @@ const Box = ({
       className={classnames({
         [styles.root]: !inline,
         [styles.inline]: inline,
+        [styles.wrap]: wrap,
 
         [styles[direction]]: direction,
         [styles[justify]]: justify,
@@ -51,8 +53,21 @@ Box.defaultProps = {
 
 Box.propTypes = {
   direction: oneOf(['row', 'rowReverse', 'column', 'columnReverse']),
-  justify: oneOf(['justifyStart', 'justifyEnd', 'justifyCenter', 'justifyAround', 'justifyBetween', 'justifyEvenly']),
-  align: oneOf(['alignStart', 'alignEnd', 'alignCenter', 'alignStretch', 'alignBaseline']),
+  justify: oneOf([
+    'justifyStart',
+    'justifyEnd',
+    'justifyCenter',
+    'justifyAround',
+    'justifyBetween',
+    'justifyEvenly',
+  ]),
+  align: oneOf([
+    'alignStart',
+    'alignEnd',
+    'alignCenter',
+    'alignStretch',
+    'alignBaseline',
+  ]),
 }
 
 export default withDirectionProps(withJustifyProps(withAlignProps(Box)))

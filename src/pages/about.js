@@ -1,14 +1,11 @@
 import React from 'react'
 
 import Default from './../layouts/Default/Default'
-import Intro from '../components/Intro/Intro'
+// import Intro from '../components/Intro/Intro'
 import Footer from '../components/Footer/Footer'
 import WhoWeAre from '../components/WhoWeAre/WhoWeAre'
 
-const AboutPage = ({
-  className,
-  ...restProps
-  }) => {
+const AboutPage = ({ className, ...restProps }) => {
   return (
     <Default>
       <WhoWeAre />

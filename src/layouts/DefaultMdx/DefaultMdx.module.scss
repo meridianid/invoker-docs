@@ -4,9 +4,71 @@
   font-family: -apple-system, sans-serif, $font-primary;
 }
 
+.heading {
+  // font-family: 'Circular Std', $font-primary;
+  font-family: $font-primary;
+}
+
+.body {
+  font-family: $font-primary;
+}
+
 .page {
   position: relative;
   display: flex;
+}
+
+.heading1 {
+  composes: heading;
+  margin-bottom: $space-ll;
+}
+
+.heading2 {
+  composes: heading;
+  margin-top: $space-ll;
+  margin-bottom: $space-ml;
+}
+
+.heading3 {
+  composes: heading;
+  margin-top: $space-l;
+  margin-bottom: $space-m;
+}
+.heading4 {
+  composes: heading;
+  margin-top: $space-l;
+  margin-bottom: $space-sm;
+}
+.heading5 {
+  composes: heading;
+  margin-top: $space-ml;
+  margin-bottom: $space-sm;
+}
+.heading6 {
+  composes: heading;
+  margin-top: $space-ml;
+  margin-bottom: $space-sm;
+}
+
+.paragraph {
+  composes: body;
+  font-weight: $regular;
+  color: $dark-alpha-70;
+  font-size: 17px;
+  line-height: 1.52;
+
+  &:not(:last-child) {
+    margin-bottom: $space-ml;
+  }
+}
+
+.listItem {
+  composes: body;
+  padding-top: $space-s;
+  padding-bottom: $space-s;
+  padding-left: $space-s;
+  font-size: 17px;
+  line-height: 1.52;
 }
 
 .mdx {
@@ -15,40 +77,6 @@
 
   img {
     width: 100%;
-  }
-
-  h1 {
-    margin-top: $space-ll;
-    margin-bottom: $space-ml;
-  }
-  h2 {
-    margin-top: $space-ll;
-    margin-bottom: $space-ml;
-  }
-  h3 {
-    margin-top: $space-l;
-    margin-bottom: $space-ml;
-  }
-  h4 {
-    margin-top: $space-ml;
-    margin-bottom: $space-sm;
-  }
-  h5 {
-    margin-top: $space-ml;
-    margin-bottom: $space-sm;
-  }
-  h6 {
-    margin-top: $space-ml;
-    margin-bottom: $space-sm;
-  }
-
-  p {
-    font-family: $font-primary;
-    font-weight: $regular;
-
-    &:not(:last-child) {
-      margin-bottom: $space-ml;
-    }
   }
 
   strong {
@@ -71,41 +99,6 @@
     padding-top: $space-sm;
     padding-bottom: $space-sm;
     margin-bottom: $space-ml;
-  }
-
-  li {
-    font-family: $font-primary;
-    padding-top: $space-s;
-    padding-bottom: $space-s;
-    padding-left: $space-s;
-  }
-
-  p,
-  li {
-    @include screen(smallPhone) {
-      font-size: 17px;
-      line-height: 26px;
-    }
-    @include screen(phone) {
-      font-size: 17px;
-      line-height: 26px;
-    }
-    @include screen(tablet) {
-      font-size: 17px;
-      line-height: 26px;
-    }
-    @include screen(tabletLandscape) {
-      font-size: 17px;
-      line-height: 26px;
-    }
-    @include screen(desktop) {
-      font-size: 17px;
-      line-height: 26px;
-    }
-    @include screen(desktopWide) {
-      font-size: 17px;
-      line-height: 26px;
-    }
   }
 
   blockquote {
