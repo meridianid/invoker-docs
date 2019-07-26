@@ -1,34 +1,34 @@
-import React from 'react';
+import React from 'react'
 
 // Detect when the user is pressing a specific key on their keyboard
 // Credits & Usage goes here: https://usehooks.com/useKeyPress/
 
 const useKeyPress = targetKey => {
-  const [keyPressed, setKeyPressed] = React.useState(false);
+  const [keyPressed, setKeyPressed] = React.useState(false)
 
   const downHandler = ({ key }) => {
     if (key === targetKey) {
-      setKeyPressed(true);
+      setKeyPressed(true)
     }
-  };
+  }
 
   const upHandler = ({ key }) => {
     if (key === targetKey) {
-      setKeyPressed(false);
+      setKeyPressed(false)
     }
-  };
+  }
 
   React.useEffect(() => {
-    window.addEventListener('keydown', downHandler);
-    window.addEventListener('keyup', upHandler);
+    window.addEventListener('keydown', downHandler)
+    window.addEventListener('keyup', upHandler)
 
     return () => {
-      window.removeEventListener('keydown', downHandler);
-      window.removeEventListener('keyup', upHandler);
-    };
-  }, []);
+      window.removeEventListener('keydown', downHandler)
+      window.removeEventListener('keyup', upHandler)
+    }
+  }, [])
 
-  return keyPressed;
-};
+  return keyPressed
+}
 
-export default useKeyPress;
+export { useKeyPress }

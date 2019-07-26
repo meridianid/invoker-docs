@@ -25,6 +25,17 @@ const LeftSidebar = ({ className, ...restProps }) => {
         <NavSidebar to="/styleguide">Styleguide</NavSidebar>
         <NavSidebar to="/design-tokens">Design Tokens</NavSidebar>
         <NavSidebar to="/components-library">Components Library</NavSidebar>
+        <NavSidebar to="/react-hooks">React Hooks</NavSidebar>
+        <ul className={styles.container}>
+          <NavSidebar to="/use-event-listener">useEventListener</NavSidebar>
+          <NavSidebar to="/use-is-mounted">useIsMounted</NavSidebar>
+          <NavSidebar to="/use-is-online">useIsOnline</NavSidebar>
+          <NavSidebar to="/use-key-press">useKeyPress</NavSidebar>
+          <NavSidebar to="/use-lock-body-scroll">useLockBodyScroll</NavSidebar>
+          <NavSidebar to="/use-media-query">useMediaQuery</NavSidebar>
+          <NavSidebar to="/use-multi-keys-press">useMultiKeysPress</NavSidebar>
+          <NavSidebar to="/use-scroll-position">useScrollPosition</NavSidebar>
+        </ul>
         <NavSidebar to="/editors">Editors</NavSidebar>
         <NavSidebar to="/deployments">Deployments</NavSidebar>
         <ul className={styles.container}>

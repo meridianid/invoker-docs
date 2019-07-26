@@ -13,6 +13,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "clean": "gatsby clean",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "lint-staged": {
@@ -78,7 +79,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/meridianid/invoker-gatsby"
+    "url": "https://github.com/meridianid/invoker-docs"
   },
   "bugs": {
     "url": "https://github.com/meridianid/invoker-gatsby/issues"

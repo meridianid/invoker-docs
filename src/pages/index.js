@@ -2,20 +2,13 @@ import React from 'react'
 
 import Default from './../layouts/Default/Default'
 import Intro from '../components/Intro/Intro'
-// import Footer from '../components/Footer/Footer'
-import SEO from '../utils/seo';
-// import WhoWeAre from '../components/WhoWeAre/WhoWeAre'
+import SEO from '../utils/seo'
 
-const HomePage = ({
-  className,
-  ...restProps
-  }) => {
+const HomePage = ({ className, ...restProps }) => {
   return (
-    <Default>
+    <Default {...restProps}>
       <SEO title="Homepage" />
       <Intro />
-      {/* <WhoWeAre /> */}
-      {/* <Footer /> */}
     </Default>
   )
 }
