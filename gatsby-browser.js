@@ -4,6 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-const { registerLinkResolver } = require('gatsby-source-prismic-graphql');
+// const { registerLinkResolver } = require('gatsby-source-prismic-graphql');
 
-registerLinkResolver(require('./src/utils/prismic/linkResolver').linkResolver);
+// registerLinkResolver(require('./src/utils/prismic/linkResolver').linkResolver);

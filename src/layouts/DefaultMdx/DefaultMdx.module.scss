@@ -71,6 +71,42 @@
   line-height: 1.52;
 }
 
+.table {
+  background-color: $light-alpha-100;
+  font-family: $font-monospace;
+}
+
+.tr {
+
+}
+
+.thead {
+  border-bottom: 2px solid $dark-alpha-20;
+}
+
+.th {
+  padding: $space-sm;
+  font-family: $font-primary;
+  color: $dark-alpha-50;
+  font-weight: 500;
+}
+
+.tbody {
+
+}
+
+.td {
+  min-width: 172px;
+  padding: $space-sm;
+  border-bottom: 1px solid $dark-alpha-20;
+  color: $dark-alpha-70;
+  font-size: $body-2;
+  line-height: 22px;
+  &:first-child {
+    font-weight: 700;
+  }
+}
+
 .mdx {
   padding-top: $space-ll;
   padding-bottom: $space-huge;

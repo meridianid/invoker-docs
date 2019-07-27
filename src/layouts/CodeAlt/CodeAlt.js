@@ -14,17 +14,24 @@ import Box from './../../layouts/Box/Box'
 import Container from './../../layouts/Container/Container'
 import Section from './../../layouts/Section/Section'
 
+import MultiKeyExample from './../../components/examples/MultiKeyExample'
+
 import theme from 'prism-react-renderer/themes/oceanicNext'
 
 export default ({ children, className, live, render }) => {
   const language = className.replace(/language-/, '')
 
-  const scope = { Button, Text, Container, Box, Section }
+  const scope = { Button, Text, Container, Box, Section, MultiKeyExample }
 
   if (live) {
     return (
       <div className={cx('gatsby-highlight', styles.font, styles.root)}>
-        <LiveProvider code={children.trim()} theme={theme} scope={scope}>
+        <LiveProvider
+          code={children.trim()}
+          theme={theme}
+          scope={scope}
+          noInline={true}
+        >
           <LivePreview style={{ marginBottom: '24px' }} />
           <LiveEditor style={{ backgroundColor: 'rgb(40, 44, 52)' }} />
           <LiveError />

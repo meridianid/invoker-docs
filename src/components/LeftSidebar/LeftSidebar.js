@@ -16,7 +16,7 @@ const LeftSidebar = ({ className, ...restProps }) => {
           <NavSidebar to="/invoker-next">Next.js</NavSidebar>
           <NavSidebar to="/invoker-crapp">Create React App</NavSidebar>
         </ul>
-        <NavSidebar to="/playground">Playground</NavSidebar>
+        <NavSidebar to="/sandbox">Sandbox</NavSidebar>
         <NavSidebar to="/what-we-use">What we use?</NavSidebar>
         <ul className={styles.container}>
           <NavSidebar to="/css-modules">CSS Modules</NavSidebar>
@@ -33,7 +33,7 @@ const LeftSidebar = ({ className, ...restProps }) => {
           <NavSidebar to="/use-key-press">useKeyPress</NavSidebar>
           <NavSidebar to="/use-lock-body-scroll">useLockBodyScroll</NavSidebar>
           <NavSidebar to="/use-media-query">useMediaQuery</NavSidebar>
-          <NavSidebar to="/use-multi-keys-press">useMultiKeysPress</NavSidebar>
+          <NavSidebar to="/use-multi-key-press">useMultiKeyPress</NavSidebar>
           <NavSidebar to="/use-scroll-position">useScrollPosition</NavSidebar>
         </ul>
         <NavSidebar to="/editors">Editors</NavSidebar>

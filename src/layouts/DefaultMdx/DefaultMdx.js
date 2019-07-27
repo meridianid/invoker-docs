@@ -39,6 +39,12 @@ const componentSerializer = {
   li: props => (
     <Text medium component="li" className={styles.listItem} {...props} />
   ),
+  table: props => <table className={styles.table} {...props} />,
+  thead: props => <thead className={styles.thead} {...props} />,
+  tbody: props => <thead className={styles.tbody} {...props} />,
+  th: props => <th className={styles.th} {...props} />,
+  td: props => <td className={styles.td} {...props} />,
+  tr: props => <tr className={styles.tr} {...props} />,
   // pre: props => <pre {...props}/>,
   code: CodeAlt,
 }
