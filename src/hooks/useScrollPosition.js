@@ -21,8 +21,8 @@ const defaultThrottler = fn => () => window.requestAnimationFrame(fn)
 const passThrough = fn => () => fn() // eslint-disable-line
 
 const getPosition = () => ({
-  x: window.pageXOffset,
-  y: window.pageYOffset,
+  x: typeof window !== 'undefined' ? window.pageXOffset : 0,
+  y: typeof window !== 'undefined' ? window.pageYOffset : 0,
 })
 
 /**
